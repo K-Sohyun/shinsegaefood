@@ -4,10 +4,480 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>신세계푸드</title>
+    <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/common.js"></script>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/common.css">
 </head>
 <body>
-    
+    <header id="hd">
+        <button id="all_open" title="전체메뉴 열기">
+            <span class="bar bar1"></span>
+            <span class="bar bar2"></span>
+            <span class="bar bar3"></span>
+        </button>
+        <h1><a href="/"><img src="./img/logo.png" alt="SHINSEGAE FOOD"></a></h1>
+        <nav id="gnb">
+            <ul>
+                <li><a href="#">COMPANY</a></li>
+                <li><a href="#">BUSINESS</a></li>
+                <li><a href="#">ESG</a></li>
+                <li><a href="#">고객지원</a></li>
+                <li><a href="#">채용</a></li>
+            </ul>
+        </nav>
+        <div class="hd_search">
+            <form action="#">
+                <input type="text">
+                <button type="button"><img src="./img/search.png" alt="검색하기"></button>
+            </form>
+        </div>
+    </header><!--Hearder end-->
+    <div id="all_menu">
+        <nav class="all_gnb">
+            <ul class="dep1_ul">
+                <li class="dep1_li">
+                    <a class="dep1_a" href="#">COMPANY</a>
+                    <ul class="dep2_ul">
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">STORY</a>
+                            <ul class="dep3_ul">
+                                <li class="dep3_li">
+                                    <a class="dep3_a" href="#">Vision</a>
+                                </li>
+                                <li class="dep3_li">
+                                    <a class="dep3_a" href="#">History</a>
+                                </li>
+                                <li class="dep3_li">
+                                    <a class="dep3_a" href="#">Contact Us</a>
+                                </li>
+                            </ul><!--dep3 end-->
+                        </li>
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">PR</a>
+                            <ul class="dep3_ul">
+                                <li class="dep3_li">
+                                    <a class="dep3_a" href="#">뉴스</a>
+                                </li>
+                                <li class="dep3_li">
+                                    <a class="dep3_a" href="#">홍보영상</a>
+                                </li>
+                            </ul><!--dep3 end-->
+                        </li>
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">IR</a>
+                            <ul class="dep3_ul">
+                                <li class="dep3_li">
+                                    <a class="dep3_a" href="#">경영정보</a>
+                                </li>
+                                <li class="dep3_li">
+                                    <a class="dep3_a" href="#">재무정보</a>
+                                </li>
+                                <li class="dep3_li">
+                                    <a class="dep3_a" href="#">주식정보</a>
+                                </li>
+                                <li class="dep3_li">
+                                    <a class="dep3_a" href="#">공시 및 공고</a>
+                                </li>
+                            </ul><!--dep3 end-->
+                        </li>
+                    </ul><!--dep2 end-->
+                </li>
+                <li class="dep1_li">
+                    <a class="dep1_a" href="#">BUSINESS</a>
+                    <ul class="dep2_ul">
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">식품제조/유통</a>
+                        </li>
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">푸드서비스</a>
+                        </li>
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">프리미엄 다이닝</a>
+                        </li>
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">베이커리</a>
+                        </li>
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">프랜차이즈</a>
+                        </li>
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">자회사</a>
+                        </li>
+                    </ul><!--dep2 end-->
+                </li>
+                <li class="dep1_li">
+                    <a class="dep1_a" href="#">ESG</a>
+                    <ul class="dep2_ul">
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">가치체계</a>
+                        </li>
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">친환경 경영</a>
+                        </li>
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">품질/안전 경영</a>
+                        </li>
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">투명경영</a>
+                        </li>
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">상생경영</a>
+                        </li>
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">사회공헌</a>
+                        </li>
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">ESG 정보</a>
+                        </li>
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">신문고</a>
+                        </li>
+                    </ul><!--dep2 end-->
+                </li>
+                <li class="dep1_li">
+                    <a class="dep1_a" href="#">고객지원</a>
+                    <ul class="dep2_ul">
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">고객의 소리</a>
+                        </li>
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">외식브랜드 가맹 및</a>
+                        </li>
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">입점 문의</a>
+                        </li>
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">위탁급식 상담</a>
+                        </li>
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">식자재 구매 상담</a>
+                        </li>
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">식자재 납품 상담</a>
+                        </li>
+                    </ul><!--dep2 end-->
+                </li>
+                <li class="dep1_li">
+                    <a class="dep1_a" href="#">채용</a>
+                    <ul class="dep2_ul">
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">인재상</a>
+                        </li>
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">인사제도</a>
+                        </li>
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">복리후생</a>
+                        </li>
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">직무소개</a>
+                        </li>
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">채용 프로세스</a>
+                        </li>
+                        <li class="dep2_li">
+                            <a class="dep2_a" href="#">채용공고</a>
+                        </li>
+                    </ul><!--dep2 end-->
+                </li>
+            </ul><!--dep1 end-->
+        </nav>
+    </div><!--All menu end-->
+
+    <main>
+        <section id="main_sce1" class="container">
+            <h2 class="skip_tag">메인 배너 영역</h2>
+            <picture>
+                <source media="(min-width: 768px)" srcset="./img/main_sec1_img02.png">
+                <img src="./img/main_sec1_img01.png" alt="BETTER FOODS FOR BETTER LIFE">
+            </picture>
+        </section><!--main_sce1 end-->
+
+        <section id="main_sce2" class="container">
+            <h2>FOOF ON</h2>
+            <div class="swiper">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <h2 class="top_tit">이번 주말 성수에서 만나</h2>
+                            <span class="back_item item1"></span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <h2 class="top_tit">데블스도어 재즈 페스타 2024</h2>
+                            <span class="back_item item2"></span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <h2 class="top_tit">오늘도 프리하세요!</h2>
+                            <span class="back_item item3"></span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <h2 class="top_tit">이마트에서 만나는 건강한 일상</h2>
+                            <span class="back_item item4"></span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <h2 class="top_tit">Happy NBB Day</h2>
+                            <span class="back_item item5"></span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <h2 class="top_tit">운동 후 노브랜드 버거에 가는 이유</h2>
+                            <span class="back_item item6"></span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <h2 class="top_tit">호테컬렉션 얼려야 맛이 산다</h2>
+                            <span class="back_item item7"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div><!--swiper end-->
+            <button class="swiper-nav btn-prev"><img src="./img/slider_prev" alt="이전"></button>
+            <button class="swiper-nav btn-next"><img src="./img/slider_next" alt="다음"></button>
+        </section><!--main_sce2 end-->
+
+        <section id="main_sce3" class="container">
+            <h2 class="skip_tag">유아왓유잇 영상 영역</h2>
+            <iframe src="https://www.youtube.com/embed/Iqu_YNus3co?si=MrfHL90EV1IUbrPC" title="You are What You Eat" frameborder="0" allowfullscreen=""></iframe>
+        </section><!--main_sce3 end-->
+
+        <section id="main_sce4" class="container">
+            <h2>BRANDS</h2>
+            <div class="swiper">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <img src="./img/main_sec4_logo01.png" alt="YOU ARE WHAT YOU EAT 로고">
+                            <span class="back_item item1"></span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <img src="./img/main_sec4_logo02.png" alt="BETTER MEAT 로고">
+                            <span class="back_item item2"></span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <img src="./img/main_sec4_logo03.png" alt="HOTEL COLLECTION 로고">
+                            <span class="back_item item3"></span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <img src="./img/main_sec4_logo04.png" alt="올바르고 반듯한 로고">
+                            <span class="back_item item4"></span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <img src="./img/main_sec4_logo05.png" alt="NO BRAND BURGER 로고">
+                            <span class="back_item item5"></span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <img src="./img/main_sec4_logo06.png" alt="UNIVERSE 로고">
+                            <span class="back_item item6"></span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <img src="./img/main_sec4_logo07.png" alt="DEVILSDOOR 로고">
+                            <span class="back_item item7"></span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <img src="./img/main_sec4_logo08.png" alt="BOULANGERIE 로고">
+                            <span class="back_item item8"></span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <img src="./img/main_sec4_logo09.png" alt="NO BRAND PIZZA 로고">
+                            <span class="back_item item9"></span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <img src="./img/main_sec4_logo10.png" alt="OSLO 로고">
+                            <span class="back_item item10"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div><!--swiper end-->
+            <button class="swiper-nav btn-prev"><img src="./img/slider_prev" alt="이전"></button>
+            <button class="swiper-nav btn-next"><img src="./img/slider_next" alt="다음"></button>
+        </section><!--main_sce4 end-->
+
+        <section id="main_sce5" class="container">
+            <h2 class="skip_tag">SF급 고민상담쇼 든든파워 영상 영역</h2>
+            <iframe src="https://www.youtube.com/embed/irFcDdPqZXI?si=MPzP4JOx_trVIz0G&amp;controls=0" title="SF급 고민상담쇼 든든파워" frameborder="0" allowfullscreen=""></iframe>
+        </section><!--main_sce5 end-->
+
+        <section id="main_sce6" class="container">
+            <h2>CONTENTS</h2>
+            <div class="swiper">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <span class="back_item item1"></span>
+                            <div class="btm_box">
+                                <h2>신세계푸드, 대한항공C&D와 식물성 기내식 개발 및 공급 MOU 체결</h2>
+                                <span>24.10.15</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <span class="back_item item2"></span>
+                            <div class="btm_box">
+                                <h2>신세계푸드, 성수동 유명 카페들과 협업 ‘카페 라이스 베이스드’ 개최</h2>
+                                <span>24.10.10</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <span class="back_item item3"></span>
+                            <div class="btm_box">
+                                <h2>신세계푸드 ‘데블스도어’, 주한 이탈리아 무역공사 와인 캠페인 ‘비바 일 비노’ 참가</h2>
+                                <span>24.09.26</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <span class="back_item item4"></span>
+                            <div class="btm_box">
+                                <h2>신세계푸드, 베트남 대표 ‘G7커피’ 손잡고 국내 첫 베이커리 협업 제품 선보여</h2>
+                                <span>24.09.12</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <span class="back_item item5"></span>
+                            <div class="btm_box">
+                                <h2>신세계푸드, 냉동 샌드위치 ‘간편한 한 끼’로 인기…맛, 건강, 가격 삼박자 만족</h2>
+                                <span>24.09.03</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <span class="back_item item6"></span>
+                            <div class="btm_box">
+                                <h2>신세계푸드 ‘노브랜드 버거’ 론칭 5주년, 이색 신메뉴 ‘오메이징 버거’ 출시</h2>
+                                <span>24.08.26</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <span class="back_item item7"></span>
+                            <div class="btm_box">
+                                <h2>"정상급 뮤지션 데블스도어에 뜬다”…신세계푸드, ‘데블스도어 재즈 페스타’ 개최</h2>
+                                <span>24.08.21</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <span class="back_item item8"></span>
+                            <div class="btm_box">
+                                <h2>신세계푸드, ‘쌀의 날’ 맞아 국산 쌀 소비 촉진 나서</h2>
+                                <span>24.08.19</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <span class="back_item item9"></span>
+                            <div class="btm_box">
+                                <h2>‘가볍고 맛있다’…샐러드 맛집 ‘노브랜드 버거’, 신메뉴로 라인업 강화</h2>
+                                <span>24.08.16</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a class="inner_box" href="#">
+                            <span class="back_item item10"></span>
+                            <div class="btm_box">
+                                <h2>신세계푸드, 소아암 환아 위해 사랑의 기부 나서</h2>
+                                <span>24.08.14</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div><!--swiper end-->
+            <button class="swiper-nav btn-prev"><img src="./img/slider_prev" alt="이전"></button>
+            <button class="swiper-nav btn-next"><img src="./img/slider_next" alt="다음"></button>
+        </section><!--main_sce6 end-->
+
+        <div id="floating_tab">
+            <ul>
+                <li><a href="#"><img src="./img/floating_img01.png" alt="">ESG 경영</a></li>
+                <li><a href="#"><img src="./img/floating_img02.png" alt="">고객의 소리</a></li>
+                <li><a href="#"><img src="./img/floating_img03.png" alt="">채용</a></li>
+            </ul>
+        </div><!--floating_tab end-->
+    </main><!--Main end-->
+
+    <footer id="ft">
+        <div class="ft_top">
+            <div class="ft_compy">
+                <strong class="compy_txt">
+                    더 나은 라이프 스타일<br>
+                    신세계푸드에서 다양한 소식을 만나보세요.
+                </strong>
+                <p class="compy_name">주식회사 <strong>신세계푸드</strong></p>
+                <p class="compy_info">
+                    <span>서울시 성동구 성수일로 56 백영성수센터 4~7층</span>
+                    <dl>
+                        <dt>문의 : </dt>
+                        <dd>02-3397-6000</dd>
+                        <dt>팩스 : </dt>
+                        <dd>02-3397-6499</dd>
+                        <dt>사업자등록번호 : </dt>
+                        <dd>215-81-47377</dd>
+                    </dl>
+                </p>
+                <p class="compy_copy">Copyright &copy; 2024 SHINSEGAE FOOD Inc. ALL RIGHTS RESERVED</p>
+            </div>
+            <ul class="ft_sns">
+                <li><a href="#" target="_blank" title="새창열림"><img src="./img/ft_sns01.png" alt="네이버"></a></li>
+                <li><a href="#" target="_blank" title="새창열림"><img src="./img/ft_sns02.png" alt="SSG"></a></li>
+                <li><a href="#" target="_blank" title="새창열림"><img src="./img/ft_sns03.png" alt="유튜브"></a></li>
+                <li><a href="#" target="_blank" title="새창열림"><img src="./img/ft_sns04.png" alt="인스타그램"></a></li>
+            </ul>
+        </div>
+        <div class="ft_btm">
+            <strong class="ft_logo">
+                <img src="./img/ft_logo.png" alt="SHINSEGAE FOOD">
+            </strong>
+            <ul class="ft_link">
+                <li><a href="#" target="_blank" title="새창열림">법적 고지</a></li>
+                <li><a href="#" target="_blank" title="새창열림">개인정보처리방침</a></li>
+                <li><a href="#" target="_blank" title="새창열림">영상정보처리기기 운영 관리 방침</a></li>
+                <li><a href="#" target="_blank" title="새창열림">이메일주소 무단수집 거부</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <button id="top_btn">
+        <img src="./img/topBtn.png" alt="상단이동">
+    </button>
 </body>
 </html>
