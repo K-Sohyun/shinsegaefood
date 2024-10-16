@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>신세계푸드</title>
     <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/common.js"></script>
+    <script defer src="./js/common.js"></script>
+    <link rel="stylesheet" href="./fonts/fonts.css">
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/common.css">
 </head>
@@ -16,7 +17,7 @@
             <span class="bar bar2"></span>
             <span class="bar bar3"></span>
         </button>
-        <h1><a href="/"><img src="./img/logo.png" alt="SHINSEGAE FOOD"></a></h1>
+        <h1 class="logo"><a href="/"><img src="./img/logo.png" alt="SHINSEGAE FOOD"></a></h1>
         <nav id="gnb">
             <ul>
                 <li><a href="#">COMPANY</a></li>
@@ -28,13 +29,20 @@
         </nav>
         <div class="hd_search">
             <form action="#">
-                <input type="text">
-                <button type="button"><img src="./img/search.png" alt="검색하기"></button>
+                <input type="text" class="s_txt">
+                <button type="button" class="s_btn"><img src="./img/search.png" alt="검색하기"></button>
             </form>
         </div>
     </header><!--Hearder end-->
     <div id="all_menu">
-        <nav class="all_gnb">
+        <div class="all_top container">
+            <strong><img src="./img/logo_all.png" alt="SHINSEGAE FOOD"> Site Map</strong>
+            <button id="all_close" title="전체메뉴 닫기">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+            </button>
+        </div>
+        <nav class="all_gnb container">
             <ul class="dep1_ul">
                 <li class="dep1_li">
                     <a class="dep1_a" href="#">COMPANY</a>
@@ -142,10 +150,7 @@
                             <a class="dep2_a" href="#">고객의 소리</a>
                         </li>
                         <li class="dep2_li">
-                            <a class="dep2_a" href="#">외식브랜드 가맹 및</a>
-                        </li>
-                        <li class="dep2_li">
-                            <a class="dep2_a" href="#">입점 문의</a>
+                            <a class="dep2_a" href="#">외식브랜드 가맹 및 <br>입점 문의</a>
                         </li>
                         <li class="dep2_li">
                             <a class="dep2_a" href="#">위탁급식 상담</a>
@@ -248,7 +253,7 @@
 
         <section id="main_sec3" class="container">
             <h2 class="skip_tag">유아왓유잇 영상 영역</h2>
-            <iframe src="https://www.youtube.com/embed/Iqu_YNus3co?si=MrfHL90EV1IUbrPC" title="You are What You Eat" frameborder="0" allowfullscreen=""></iframe>
+            <!-- <iframe src="https://www.youtube.com/embed/Iqu_YNus3co?si=MrfHL90EV1IUbrPC" title="You are What You Eat" frameborder="0" allowfullscreen=""></iframe> -->
         </section><!--main_sec3 end-->
 
         <section id="main_sec4" class="container">
@@ -323,7 +328,7 @@
 
         <section id="main_sec5" class="container">
             <h2 class="skip_tag">SF급 고민상담쇼 든든파워 영상 영역</h2>
-            <iframe src="https://www.youtube.com/embed/irFcDdPqZXI?si=MPzP4JOx_trVIz0G&amp;controls=0" title="SF급 고민상담쇼 든든파워" frameborder="0" allowfullscreen=""></iframe>
+            <!-- <iframe src="https://www.youtube.com/embed/irFcDdPqZXI?si=MPzP4JOx_trVIz0G&amp;controls=0" title="SF급 고민상담쇼 든든파워" frameborder="0" allowfullscreen=""></iframe> -->
         </section><!--main_sec5 end-->
 
         <section id="main_sec6" class="container">
