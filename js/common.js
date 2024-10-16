@@ -19,6 +19,17 @@ document.querySelectorAll('#all_menu .dep2_ul').forEach(function(dep2Ul){
     }
 });
 
+var mainSwiper1 = new Swiper(".main_swiper1", {
+    slidesPerView: 5, 
+    spaceBetween: 25,
+    loop: true,
+    loopedSlides: 7,
+    navigation: {
+        nextEl: "#main_sec2 .btn-next",
+        prevEl: "#main_sec2 .btn-prev",
+    },
+  });
+
 
 /*
 window.addEventListener('scroll', function () {
