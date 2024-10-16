@@ -1,0 +1,237 @@
+@charset "UTF-8";
+/*기본 CSS*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.2;
+  position: relative;
+  min-width: 280px;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Pretendard", sans-serif;
+  color: #000;
+}
+
+ol,
+ul,
+dl {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.clear::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.skip_tag {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+.container {
+  max-width: 1500px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/*Header*/
+#hd {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 0 8rem;
+  z-index: 1000;
+}
+#hd #all_open {
+  position: relative;
+  width: 36px;
+  height: 100%;
+  margin-right: 50px;
+}
+#hd #all_open .bar {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 3px;
+  background: #1e1e1e;
+}
+#hd #all_open .bar.bar1 {
+  margin-top: -12px;
+}
+#hd #all_open .bar.bar3 {
+  margin-top: 12px;
+}
+#hd .logo {
+  margin-right: auto;
+  max-width: 190px;
+}
+#hd #gnb ul {
+  display: flex;
+  column-gap: 9rem;
+}
+#hd #gnb ul li a {
+  display: block;
+  line-height: 70px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+#hd .hd_search {
+  width: 160px;
+  position: relative;
+  margin-left: auto;
+}
+#hd .hd_search .s_txt {
+  width: 100%;
+  height: 40px;
+  padding: 0 40px 0 14px;
+  border-radius: 20px;
+  background: none;
+  border: 2px solid #1c1d1d;
+}
+#hd .hd_search .s_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  text-align: left;
+}
+#hd .hd_search .s_btn img {
+  vertical-align: middle;
+}
+
+#all_menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0;
+  background: #1e1e1e;
+  z-index: 1100;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+#all_menu.on {
+  height: 100vh;
+  opacity: 1;
+  visibility: visible;
+}
+#all_menu .all_top {
+  display: flex;
+  align-items: center;
+  padding: 8rem 3rem 3rem 10rem;
+  border-bottom: 1px solid #adadad;
+}
+#all_menu .all_top strong {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #fff;
+  margin-right: auto;
+}
+#all_menu .all_top strong img {
+  width: 190px;
+  margin-right: 10px;
+}
+#all_menu .all_top #all_close {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+#all_menu .all_top #all_close .bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 2px;
+  background: #fff;
+}
+#all_menu .all_top #all_close .bar.bar1 {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+#all_menu .all_top #all_close .bar.bar2 {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+#all_menu .all_gnb .dep1_ul {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  -ms-overflow-style: none;
+}
+#all_menu .all_gnb .dep1_ul::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
+}
+#all_menu .all_gnb .dep1_ul .dep1_li {
+  width: 20%;
+  text-align: center;
+}
+#all_menu .all_gnb .dep1_ul .dep1_li .dep1_a {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  padding: 4.5rem 0 3.5rem;
+}
+#all_menu .all_gnb .dep1_ul .dep1_li .dep2_ul.sub_yes .dep2_li {
+  margin-top: 50px;
+}
+#all_menu .all_gnb .dep1_ul .dep1_li .dep2_ul.sub_yes .dep2_li:first-child {
+  margin-top: 0;
+}
+#all_menu .all_gnb .dep1_ul .dep1_li .dep2_ul .dep2_li a {
+  display: block;
+  font-size: 1.8rem;
+  color: #fff;
+  padding: 10px;
+}
+#all_menu .all_gnb .dep1_ul .dep1_li .dep2_ul .dep3_a::before {
+  content: "-";
+  display: inline-block;
+  margin-right: 2px;
+}
