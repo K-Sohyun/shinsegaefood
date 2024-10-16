@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>신세계푸드</title>
-    <script src="./js/swiper-bundle.min.js"></script>
-    <script defer src="./js/common.js"></script>
     <link rel="stylesheet" href="./fonts/fonts.css">
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/common.css">
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script defer src="./js/common.js"></script>
 </head>
 <body>
     <header id="hd">
@@ -191,69 +191,66 @@
     </div><!--All menu end-->
 
     <main>
-        <section id="main_sec1" class="container">
-            <h2 class="skip_tag">메인 배너 영역</h2>
-            <picture>
-                <source media="(max-width: 768px)" srcset="./img/main_sec1_img02.jpg">
-                <img src="./img/main_sec1_img01.png" alt="BETTER FOODS FOR BETTER LIFE">
-            </picture>
+        <section id="main_sec1">
+            <div class="container">
+                <h2 class="skip_tag">메인 배너 영역</h2>
+                <picture>
+                    <source media="(max-width: 768px)" srcset="./img/main_sec1_img02.jpg">
+                    <img src="./img/main_sec1_img01.png" alt="BETTER FOODS FOR BETTER LIFE">
+                </picture>
+            </div>
         </section><!--main_sec1 end-->
 
         <section id="main_sec2" class="container">
-            <h2>FOOF ON</h2>
-            <div class="swiper">
-                <ul class="swiper-wrapper">
-                    <li class="swiper-slide">
-                        <a class="inner_box" href="#">
-                            <h2 class="top_tit">이번 주말 성수에서 만나</h2>
-                            <span class="back_item item1"></span>
+            <h2>FOOD ON</h2>
+            <div class="swiper main_swiper1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a class="inner_box item1" href="#">
+                            <h3 class="top_tit"><span>이번 주말 <br>성수에서 만나</span></h3>
                         </a>
-                    </li>
-                    <li class="swiper-slide">
-                        <a class="inner_box" href="#">
-                            <h2 class="top_tit">데블스도어 재즈 페스타 2024</h2>
-                            <span class="back_item item2"></span>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="inner_box item2" href="#">
+                            <h3 class="top_tit"><span>데블스도어 재즈 페스타 <br>2024</span></h3>
                         </a>
-                    </li>
-                    <li class="swiper-slide">
-                        <a class="inner_box" href="#">
-                            <h2 class="top_tit">오늘도 프리하세요!</h2>
-                            <span class="back_item item3"></span>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="inner_box item3" href="#">
+                            <h3 class="top_tit"><span>오늘도 <br>프리하세요!</span></h3>
                         </a>
-                    </li>
-                    <li class="swiper-slide">
-                        <a class="inner_box" href="#">
-                            <h2 class="top_tit">이마트에서 만나는 건강한 일상</h2>
-                            <span class="back_item item4"></span>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="inner_box item4" href="#">
+                            <h3 class="top_tit"><span>이마트에서 만나는 <br>건강한 일상</span></h3>
                         </a>
-                    </li>
-                    <li class="swiper-slide">
-                        <a class="inner_box" href="#">
-                            <h2 class="top_tit">Happy NBB Day</h2>
-                            <span class="back_item item5"></span>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="inner_box item5" href="#">
+                            <h3 class="top_tit"><span>Happy NBB Day</span></h3>
                         </a>
-                    </li>
-                    <li class="swiper-slide">
-                        <a class="inner_box" href="#">
-                            <h2 class="top_tit">운동 후 노브랜드 버거에 가는 이유</h2>
-                            <span class="back_item item6"></span>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="inner_box item6" href="#">
+                            <h3 class="top_tit"><span>운동 후 노브랜드 버거 <br>에 가는 이유</span></h3>
                         </a>
-                    </li>
-                    <li class="swiper-slide">
-                        <a class="inner_box" href="#">
-                            <h2 class="top_tit">호테컬렉션 얼려야 맛이 산다</h2>
-                            <span class="back_item item7"></span>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="inner_box item7" href="#">
+                            <h3 class="top_tit"><span>호테컬렉션 <br>얼려야 맛이 산다</span></h3>
                         </a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
+                <button class="swiper-nav btn-prev"><img src="./img/slider_prev.png" alt="이전"></button>   
+                <button class="swiper-nav btn-next"><img src="./img/slider_next.png" alt="다음"></button>
             </div><!--swiper end-->
-            <button class="swiper-nav btn-prev"><img src="./img/slider_prev.png" alt="이전"></button>
-            <button class="swiper-nav btn-next"><img src="./img/slider_next.png" alt="다음"></button>
         </section><!--main_sec2 end-->
 
         <section id="main_sec3" class="container">
             <h2 class="skip_tag">유아왓유잇 영상 영역</h2>
-            <!-- <iframe src="https://www.youtube.com/embed/Iqu_YNus3co?si=MrfHL90EV1IUbrPC" title="You are What You Eat" frameborder="0" allowfullscreen=""></iframe> -->
+            <div class="video_box">
+                <iframe src="https://www.youtube.com/embed/Iqu_YNus3co?si=CvHsfdcZbtY_eegh" title="You are What You Eat" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </section><!--main_sec3 end-->
 
         <section id="main_sec4" class="container">
@@ -327,8 +324,10 @@
         </section><!--main_sec4 end-->
 
         <section id="main_sec5" class="container">
-            <h2 class="skip_tag">SF급 고민상담쇼 든든파워 영상 영역</h2>
-            <!-- <iframe src="https://www.youtube.com/embed/irFcDdPqZXI?si=MPzP4JOx_trVIz0G&amp;controls=0" title="SF급 고민상담쇼 든든파워" frameborder="0" allowfullscreen=""></iframe> -->
+            <h2 class="skip_tag">비밀맛집 영상 영역</h2>
+            <div class="video_box">
+                <iframe src="https://www.youtube.com/embed/o4nMFgIHyB0?si=hjNY0MwFoSUy23Kq" title="비밀맛집 제주 S호텔 전복 한우 차돌박이" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </section><!--main_sec5 end-->
 
         <section id="main_sec6" class="container">
@@ -339,7 +338,7 @@
                         <a class="inner_box" href="#">
                             <span class="back_item item1"></span>
                             <div class="btm_box">
-                                <h2>신세계푸드, 대한항공C&D와 식물성 기내식 개발 및 공급 MOU 체결</h2>
+                                <h3>신세계푸드, 대한항공C&D와 식물성 기내식 개발 및 공급 MOU 체결</h3>
                                 <span>24.10.15</span>
                             </div>
                         </a>
@@ -348,7 +347,7 @@
                         <a class="inner_box" href="#">
                             <span class="back_item item2"></span>
                             <div class="btm_box">
-                                <h2>신세계푸드, 성수동 유명 카페들과 협업 ‘카페 라이스 베이스드’ 개최</h2>
+                                <h3>신세계푸드, 성수동 유명 카페들과 협업 ‘카페 라이스 베이스드’ 개최</h3>
                                 <span>24.10.10</span>
                             </div>
                         </a>
@@ -357,7 +356,7 @@
                         <a class="inner_box" href="#">
                             <span class="back_item item3"></span>
                             <div class="btm_box">
-                                <h2>신세계푸드 ‘데블스도어’, 주한 이탈리아 무역공사 와인 캠페인 ‘비바 일 비노’ 참가</h2>
+                                <h3>신세계푸드 ‘데블스도어’, 주한 이탈리아 무역공사 와인 캠페인 ‘비바 일 비노’ 참가</h3>
                                 <span>24.09.26</span>
                             </div>
                         </a>
@@ -366,7 +365,7 @@
                         <a class="inner_box" href="#">
                             <span class="back_item item4"></span>
                             <div class="btm_box">
-                                <h2>신세계푸드, 베트남 대표 ‘G7커피’ 손잡고 국내 첫 베이커리 협업 제품 선보여</h2>
+                                <h3>신세계푸드, 베트남 대표 ‘G7커피’ 손잡고 국내 첫 베이커리 협업 제품 선보여</h3>
                                 <span>24.09.12</span>
                             </div>
                         </a>
@@ -375,7 +374,7 @@
                         <a class="inner_box" href="#">
                             <span class="back_item item5"></span>
                             <div class="btm_box">
-                                <h2>신세계푸드, 냉동 샌드위치 ‘간편한 한 끼’로 인기…맛, 건강, 가격 삼박자 만족</h2>
+                                <h3>신세계푸드, 냉동 샌드위치 ‘간편한 한 끼’로 인기…맛, 건강, 가격 삼박자 만족</h3>
                                 <span>24.09.03</span>
                             </div>
                         </a>
@@ -384,7 +383,7 @@
                         <a class="inner_box" href="#">
                             <span class="back_item item6"></span>
                             <div class="btm_box">
-                                <h2>신세계푸드 ‘노브랜드 버거’ 론칭 5주년, 이색 신메뉴 ‘오메이징 버거’ 출시</h2>
+                                <h3>신세계푸드 ‘노브랜드 버거’ 론칭 5주년, 이색 신메뉴 ‘오메이징 버거’ 출시</h3>
                                 <span>24.08.26</span>
                             </div>
                         </a>
@@ -393,7 +392,7 @@
                         <a class="inner_box" href="#">
                             <span class="back_item item7"></span>
                             <div class="btm_box">
-                                <h2>"정상급 뮤지션 데블스도어에 뜬다”…신세계푸드, ‘데블스도어 재즈 페스타’ 개최</h2>
+                                <h3>"정상급 뮤지션 데블스도어에 뜬다”…신세계푸드, ‘데블스도어 재즈 페스타’ 개최</h3>
                                 <span>24.08.21</span>
                             </div>
                         </a>
@@ -402,7 +401,7 @@
                         <a class="inner_box" href="#">
                             <span class="back_item item8"></span>
                             <div class="btm_box">
-                                <h2>신세계푸드, ‘쌀의 날’ 맞아 국산 쌀 소비 촉진 나서</h2>
+                                <h3>신세계푸드, ‘쌀의 날’ 맞아 국산 쌀 소비 촉진 나서</h3>
                                 <span>24.08.19</span>
                             </div>
                         </a>
@@ -411,7 +410,7 @@
                         <a class="inner_box" href="#">
                             <span class="back_item item9"></span>
                             <div class="btm_box">
-                                <h2>‘가볍고 맛있다’…샐러드 맛집 ‘노브랜드 버거’, 신메뉴로 라인업 강화</h2>
+                                <h3>‘가볍고 맛있다’…샐러드 맛집 ‘노브랜드 버거’, 신메뉴로 라인업 강화</h3>
                                 <span>24.08.16</span>
                             </div>
                         </a>
@@ -420,7 +419,7 @@
                         <a class="inner_box" href="#">
                             <span class="back_item item10"></span>
                             <div class="btm_box">
-                                <h2>신세계푸드, 소아암 환아 위해 사랑의 기부 나서</h2>
+                                <h3>신세계푸드, 소아암 환아 위해 사랑의 기부 나서</h3>
                                 <span>24.08.14</span>
                             </div>
                         </a>
