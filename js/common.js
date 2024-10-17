@@ -28,7 +28,29 @@ var mainSwiper1 = new Swiper(".main_swiper1", {
         nextEl: "#main_sec2 .btn-next",
         prevEl: "#main_sec2 .btn-prev",
     },
-  });
+});
+
+var mainSwiper2 = new Swiper(".main_swiper2", {
+    slidesPerView: 5, 
+    spaceBetween: 25,
+    loop: true,
+    loopedSlides: 10,
+    navigation: {
+        nextEl: "#main_sec4 .btn-next",
+        prevEl: "#main_sec4 .btn-prev",
+    },
+});
+
+var mainSwiper3 = new Swiper(".main_swiper3", {
+    slidesPerView: 5, 
+    spaceBetween: 25,
+    loop: true,
+    loopedSlides: 10,
+    navigation: {
+        nextEl: "#main_sec6 .btn-next",
+        prevEl: "#main_sec6 .btn-prev",
+    },
+});
 
 
 /*
