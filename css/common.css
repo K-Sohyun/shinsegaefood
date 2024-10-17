@@ -33,7 +33,9 @@ button {
   color: #000;
 }
 
-ol, ul, dl {
+ol,
+ul,
+dl {
   margin: 0;
   padding: 0;
 }
@@ -102,8 +104,11 @@ img {
   margin-top: 12px;
 }
 #hd .logo {
-  margin-right: 27rem;
+  margin-right: auto;
   max-width: 190px;
+}
+#hd #gnb {
+  margin-right: 6%;
 }
 #hd #gnb ul {
   display: flex;
@@ -261,26 +266,71 @@ main .video_box iframe {
   width: 100%;
   height: 100%;
 }
-main #main_sec1 {
-  padding: 17rem 0 7rem;
-}
-main #main_sec2 {
-  padding: 7rem 15px;
-}
-main #main_sec2 .swiper {
+main .swiper {
   overflow: visible;
 }
-main #main_sec2 .swiper::before {
+main .swiper::before {
   content: "";
   position: absolute;
   top: 0;
   right: 100%;
   width: 100%;
   height: calc(100% + 50px);
-  background: #efe5d9;
   z-index: 5;
 }
-main #main_sec2 .swiper .swiper-nav {
+main .swiper .inner_box {
+  display: block;
+  position: relative;
+  border-radius: 35px;
+  overflow: hidden;
+  padding-top: 160%;
+  box-shadow: 5px 7px 5px rgba(0, 0, 0, 0.4);
+}
+main .swiper .inner_box .back_item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s;
+}
+main .swiper .inner_box .back_item:focus, main .swiper .inner_box .back_item:hover {
+  transform: scale(1.04);
+}
+main .swiper .inner_box .back_item.item1 {
+  background-image: url("../img/main_sec4_img1.png");
+}
+main .swiper .inner_box .back_item.item2 {
+  background-image: url("../img/main_sec4_img2.png");
+}
+main .swiper .inner_box .back_item.item3 {
+  background-image: url("../img/main_sec4_img3.png");
+}
+main .swiper .inner_box .back_item.item4 {
+  background-image: url("../img/main_sec4_img4.png");
+}
+main .swiper .inner_box .back_item.item5 {
+  background-image: url("../img/main_sec4_img5.png");
+}
+main .swiper .inner_box .back_item.item6 {
+  background-image: url("../img/main_sec4_img6.png");
+}
+main .swiper .inner_box .back_item.item7 {
+  background-image: url("../img/main_sec4_img7.png");
+}
+main .swiper .inner_box .back_item.item8 {
+  background-image: url("../img/main_sec4_img8.png");
+}
+main .swiper .inner_box .back_item.item9 {
+  background-image: url("../img/main_sec4_img9.png");
+}
+main .swiper .inner_box .back_item.item10 {
+  background-image: url("../img/main_sec4_img10.png");
+}
+main .swiper .swiper-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -289,45 +339,22 @@ main #main_sec2 .swiper .swiper-nav {
   z-index: 5;
   cursor: pointer;
 }
-main #main_sec2 .swiper .swiper-nav.btn-prev {
+main .swiper .swiper-nav.btn-prev {
   right: calc(100% - 4.75rem);
 }
-main #main_sec2 .swiper .swiper-nav.btn-next {
+main .swiper .swiper-nav.btn-next {
   left: calc(100% - 4.75rem);
 }
-main #main_sec2 .swiper .inner_box {
-  display: block;
-  position: relative;
-  border-radius: 35px;
-  overflow: hidden;
-  padding-top: 160%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 5px 7px 5px rgba(0, 0, 0, 0.4);
+main #main_sec1 {
+  padding: 17rem 0 7rem;
 }
-main #main_sec2 .swiper .inner_box.item1 {
-  background-image: url("/img/main_sec2_img01.png");
+main #main_sec2 {
+  padding: 7rem 15px;
 }
-main #main_sec2 .swiper .inner_box.item2 {
-  background-image: url("/img/main_sec2_img02.png");
+main #main_sec2 .swiper::before {
+  background: #efe5d9;
 }
-main #main_sec2 .swiper .inner_box.item3 {
-  background-image: url("/img/main_sec2_img03.png");
-}
-main #main_sec2 .swiper .inner_box.item4 {
-  background-image: url("/img/main_sec2_img04.png");
-}
-main #main_sec2 .swiper .inner_box.item5 {
-  background-image: url("/img/main_sec2_img05.png");
-}
-main #main_sec2 .swiper .inner_box.item6 {
-  background-image: url("/img/main_sec2_img06.png");
-}
-main #main_sec2 .swiper .inner_box.item7 {
-  background-image: url("/img/main_sec2_img07.png");
-}
-main #main_sec2 .swiper .inner_box h3 {
+main #main_sec2 .swiper h3 {
   position: absolute;
   top: 0;
   left: 0;
@@ -339,8 +366,9 @@ main #main_sec2 .swiper .inner_box h3 {
   color: #fff;
   background: rgba(0, 0, 0, 0.8);
   padding: 2.5rem 2rem;
+  z-index: 1;
 }
-main #main_sec2 .swiper .inner_box h3 span {
+main #main_sec2 .swiper h3 span {
   display: block;
   word-break: keep-all;
   display: -webkit-box;
@@ -349,6 +377,55 @@ main #main_sec2 .swiper .inner_box h3 span {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-main #main_sec3 {
+
+#main_sec3 {
   padding: 7rem 15px;
+}
+
+#main_sec4 {
+  padding: 7rem 15px;
+}
+#main_sec4 h2 {
+  color: #fff;
+}
+#main_sec4 .swiper::before {
+  background: #1e1e1e;
+}
+#main_sec4 .swiper .inner_box img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60%;
+  max-height: 20%;
+  z-index: 1;
+}
+#main_sec4 #main_sec5 {
+  padding: 7rem 15px;
+}
+#main_sec4 #main_sec5 .swiper::before {
+  background: #1e1e1e;
+}
+#main_sec4 #main_sec5 .swiper .btm_box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 1.6rem;
+  line-height: 1.3;
+}
+#main_sec4 #main_sec5 .swiper .btm_box h3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1rem 3rem;
+}
+#main_sec4 #main_sec5 .swiper .btm_box span {
+  font-size: 14px;
+  display: block;
+  margin-top: 10px;
 }
