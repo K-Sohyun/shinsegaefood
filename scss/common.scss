@@ -297,13 +297,68 @@ img {
 
 /*Main*/
 main {
-    background: linear-gradient(to bottom, #efe5d9 43.3%, #1e1e1e 0%);
     position: relative;
+    background: linear-gradient(to bottom, #efe5d9 43.3%, #1e1e1e 0%);
     padding-bottom: 6.5rem;
 
-    >section {
+    #floating_tab {
+        background: #8f8f8f;
+        max-width: 660px;
+        margin: 0 auto;
+        border-radius: 35px;
+        padding: 8px 10px;
+        position: sticky;
+        left: 0;
+        bottom: 35px;
+        z-index: 999;
+
+        ul {
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            text-align: center;
+
+            li {
+                width: calc(33.3333% - 7px);
+
+                a {
+                    display: block;
+                    font-size: $fs-18;
+                    font-weight: 700;
+                    color: #fff;
+                    line-height: 5rem;
+                    border-radius: 35px;
+                    transition: all 0.3s;
+
+                    &:focus,
+                    &:hover,
+                    &.on {
+                        background: #000;
+                    }
+
+                    img {
+                        vertical-align: middle;
+                        width: 30px;
+                        margin-right: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#main_container {
+    overflow: hidden;
+
+    .main_sec {
         position: relative;
         z-index: 1;
+        transform: translateY(-20px);
+        transition: all 0.3s;
+    }
+
+    .ani {
+        transform: translateY(0);
     }
 
     h2 {
@@ -523,51 +578,6 @@ main {
                     display: block;
                     margin-top: 10px;
                     font-weight: 600;
-                }
-            }
-        }
-    }
-
-    #floating_tab {
-        background: #8f8f8f;
-        max-width: 660px;
-        margin: 0 auto;
-        border-radius: 35px;
-        padding: 8px 10px;
-        position: sticky;
-        left: 0;
-        bottom: 35px;
-        z-index: 999;
-
-        ul {
-            display: flex;
-            align-items: center;
-            column-gap: 10px;
-            text-align: center;
-
-            li {
-                width: calc(33.3333% - 7px);
-
-                a {
-                    display: block;
-                    font-size: $fs-18;
-                    font-weight: 700;
-                    color: #fff;
-                    line-height: 5rem;
-                    border-radius: 35px;
-                    transition: all 0.3s;
-
-                    &:focus,
-                    &:hover,
-                    &.on {
-                        background: #000;
-                    }
-
-                    img {
-                        vertical-align: middle;
-                        width: 30px;
-                        margin-right: 12px;
-                    }
                 }
             }
         }
