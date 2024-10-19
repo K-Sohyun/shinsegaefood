@@ -1,3 +1,11 @@
+//플로팅메뉴
+const floating = document.querySelector('#floating_tab');
+
+setTimeout(function() {
+    floating.classList.add('on');
+}, 500);
+
+
 //전체메뉴
 const menuOpen = document.querySelector('#all_open');
 const menuClose = document.querySelector('#all_close');

@@ -247,14 +247,25 @@ main {
 }
 main #floating_tab {
   background: #8f8f8f;
-  max-width: 660px;
-  margin: 0 auto;
+  max-width: 90px;
+  margin: 10rem auto 0;
   border-radius: 35px;
   padding: 8px 10px;
   position: sticky;
   left: 0;
   bottom: 35px;
   z-index: 999;
+  opacity: 0;
+  transform: translateY(15vh);
+  transition: transform 0.3s, opacity 0.5s, max-width 0.5s 0.3s;
+}
+main #floating_tab.on {
+  max-width: 660px;
+  transform: translateY(0);
+  opacity: 1;
+}
+main #floating_tab.on ul li a {
+  opacity: 1;
 }
 main #floating_tab ul {
   display: flex;
@@ -272,7 +283,10 @@ main #floating_tab ul li a {
   color: #fff;
   line-height: 5rem;
   border-radius: 35px;
-  transition: all 0.3s;
+  white-space: nowrap;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.5s 0.6s;
 }
 main #floating_tab ul li a:focus, main #floating_tab ul li a:hover, main #floating_tab ul li a.on {
   background: #000;
@@ -289,8 +303,8 @@ main #floating_tab ul li a img {
 #main_container .main_sec {
   position: relative;
   z-index: 1;
-  transform: translateY(-20px);
-  transition: all 0.3s;
+  transform: translateY(-15px);
+  transition: transform 0.7s cubic-bezier(0.35, 1, 0.65, 1);
 }
 #main_container .ani {
   transform: translateY(0);
@@ -323,10 +337,11 @@ main #floating_tab ul li a img {
 #main_container .swiper::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 50%;
   right: 100%;
+  transform: translateY(-50%);
   width: 100%;
-  height: calc(100% + 2rem);
+  height: calc(100% + 3rem);
   z-index: 5;
 }
 #main_container .swiper .inner_box {
@@ -348,7 +363,7 @@ main #floating_tab ul li a img {
   background-position: center;
   transition: all 0.3s;
 }
-#main_container .swiper .inner_box .back_item:focus, #main_container .swiper .inner_box .back_item:hover {
+#main_container .swiper .inner_box:focus .back_item, #main_container .swiper .inner_box:hover .back_item {
   transform: scale(1.04);
 }
 #main_container .swiper .swiper-nav {
@@ -486,7 +501,7 @@ main #floating_tab ul li a img {
   color: #fff;
 }
 #main_container #main_sec6 {
-  padding: 7rem 15px 16rem;
+  padding: 7rem 15px;
 }
 #main_container #main_sec6 h2 {
   color: #fff;
