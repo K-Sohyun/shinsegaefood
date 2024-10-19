@@ -28,6 +28,31 @@ document.querySelectorAll('#all_menu .dep2_ul').forEach(function(dep2Ul){
 });
 
 
+//모바일메뉴
+const allDep1Lis = document.querySelectorAll('#all_menu .dep1_li');
+let isMobile = window.innerWidth <= 768;
+
+function menuToggle(event) {
+    const allDep2Uls = event.currentTarget.querySelector('#all_menu .dep2_ul');
+    if(allDep2Uls) {
+        allDep2Uls.classList.toggle('show');
+    }
+}
+
+allDep1Lis.forEach(function (item) {
+    item.addEventListener('click', function (event) {
+        if (isMobile) {
+            event.stopPropagation();
+            menuToggle(event);
+        }
+    });
+});
+
+window.addEventListener('resize', function () {
+    isMobile = window.innerWidth <= 768;
+});
+
+
 //패밀리사이트
 const familyBtn = document.querySelector('.fam_btn');
 const familyList = document.querySelector('.fam_list');
@@ -79,34 +104,67 @@ window.addEventListener('scroll', function () {
 
 //슬라이드
 var mainSwiper1 = new Swiper(".main_swiper1", {
-    slidesPerView: 5, 
-    spaceBetween: 25,
+    slidesPerView: 2.5,
+    spaceBetween: 15,
     loop: true,
     loopedSlides: 7,
     navigation: {
         nextEl: "#main_sec2 .btn-next",
         prevEl: "#main_sec2 .btn-prev",
     },
+    breakpoints: {
+        768: {
+          slidesPerView: 3.5,  //브라우저가 768 이상
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 5,  //브라우저가 1024 이상
+          spaceBetween: 25,
+        },
+    },
+    observer : true
 });
 
 var mainSwiper2 = new Swiper(".main_swiper2", {
-    slidesPerView: 5, 
-    spaceBetween: 25,
+    slidesPerView: 2.5, 
+    spaceBetween: 15,
     loop: true,
     loopedSlides: 10,
     navigation: {
         nextEl: "#main_sec4 .btn-next",
         prevEl: "#main_sec4 .btn-prev",
     },
+    breakpoints: {
+        768: {
+          slidesPerView: 3.5, 
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 5, 
+          spaceBetween: 25,
+        },
+    },
+    observer : true
 });
 
 var mainSwiper3 = new Swiper(".main_swiper3", {
-    slidesPerView: 4, 
-    spaceBetween: 25,
+    slidesPerView: 1.5, 
+    spaceBetween: 15,
     loop: true,
     loopedSlides: 10,
     navigation: {
         nextEl: "#main_sec6 .btn-next",
         prevEl: "#main_sec6 .btn-prev",
     },
+    breakpoints: {
+        768: {
+          slidesPerView: 2.5,  
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 25,
+        },
+    },
+    observer : true
 });
