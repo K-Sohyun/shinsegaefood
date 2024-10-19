@@ -1,3 +1,11 @@
+//플로팅메뉴
+const floating = document.querySelector('#floating_tab');
+
+setTimeout(function() {
+    floating.classList.add('on');
+}, 500);
+
+
 //전체메뉴
 const menuOpen = document.querySelector('#all_open');
 const menuClose = document.querySelector('#all_close');
@@ -19,13 +27,14 @@ document.querySelectorAll('#all_menu .dep2_ul').forEach(function(dep2Ul){
     }
 });
 
-//패밀리사이트
-const family_btn = document.querySelector('.fam_btn');
-const family_list = document.querySelector('.fam_list');
 
-family_btn.addEventListener('click', function () {
-    family_btn.classList.toggle('on');
-    family_list.classList.toggle('on');
+//패밀리사이트
+const familyBtn = document.querySelector('.fam_btn');
+const familyList = document.querySelector('.fam_list');
+
+familyBtn.addEventListener('click', function () {
+    familyBtn.classList.toggle('on');
+    familyList.classList.toggle('on');
 });
 
 
@@ -43,6 +52,28 @@ window.addEventListener('scroll', function () {
 topBtn.addEventListener('click', function (e) {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+
+//메인 애니
+const mainEls = document.querySelectorAll('.main_sec');
+
+window.addEventListener('scroll', function () {
+    let winT = document.documentElement.scrollTop;
+    let winH = window.innerHeight; //브라우저 창 높이
+    let winB = winT + winH; //뷰포트 하단
+
+    mainEls.forEach(function (mainEl) {
+        let mainElT = mainEl.offsetTop;
+        let mainElH = mainEl.offsetHeight;
+        let mainElB = mainElT + mainElH; //요소의 하단
+
+        if (mainElB >= winT && mainElT <= winB) {
+            mainEl.classList.add('ani');
+        } else {
+            mainEl.classList.remove('ani');
+        }
+    });
 });
 
 

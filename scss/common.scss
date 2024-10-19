@@ -297,13 +297,84 @@ img {
 
 /*Main*/
 main {
-    background: linear-gradient(to bottom, #efe5d9 43.3%, #1e1e1e 0%);
     position: relative;
+    background: linear-gradient(to bottom, #efe5d9 43.3%, #1e1e1e 0%);
     padding-bottom: 6.5rem;
 
-    >section {
+    #floating_tab {
+        background: #8f8f8f;
+        max-width: 90px;
+        margin: 10rem auto 0;
+        border-radius: 35px;
+        padding: 8px 10px;
+        position: sticky;
+        left: 0;
+        bottom: 35px;
+        z-index: 999;
+        opacity: 0;
+        transform: translateY(15vh);
+        transition: transform 0.3s, opacity 0.5s, max-width 0.5s 0.3s;
+
+        &.on {
+            max-width: 660px;
+            transform: translateY(0);
+            opacity: 1;
+
+            ul li a {
+                opacity: 1;
+            }
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            text-align: center;
+
+            li {
+                width: calc(33.3333% - 7px);
+
+                a {
+                    display: block;
+                    font-size: $fs-18;
+                    font-weight: 700;
+                    color: #fff;
+                    line-height: 5rem;
+                    border-radius: 35px;
+                    white-space: nowrap;
+                    opacity: 0;
+                    overflow: hidden;
+                    transition: opacity 0.5s 0.6s;
+
+                    &:focus,
+                    &:hover,
+                    &.on {
+                        background: #000;
+                    }
+
+                    img {
+                        vertical-align: middle;
+                        width: 30px;
+                        margin-right: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#main_container {
+    overflow: hidden;
+
+    .main_sec {
         position: relative;
         z-index: 1;
+        transform: translateY(-15px);
+        transition: transform 0.7s cubic-bezier(0.35, 1, 0.65, 1);
+    }
+
+    .ani {
+        transform: translateY(0);
     }
 
     h2 {
@@ -337,10 +408,11 @@ main {
         &::before {
             content: "";
             position: absolute;
-            top: 0;
+            top: 50%;
             right: 100%;
+            transform: translateY(-50%);
             width: 100%;
-            height: calc(100% + 2rem);
+            height: calc(100% + 3rem);
             z-index: 5;
         }
 
@@ -362,11 +434,10 @@ main {
                 background-size: cover;
                 background-position: center;
                 transition: all 0.3s;
-
-                &:focus,
-                &:hover {
-                    transform: scale(1.04);
-                }
+            }
+            &:focus .back_item,
+            &:hover .back_item {
+                transform: scale(1.04);
             }
         }
 
@@ -479,7 +550,7 @@ main {
     }
 
     #main_sec6 {
-        padding: 7rem 15px 16rem;
+        padding: 7rem 15px;
 
         h2 {
             color: #fff;
@@ -523,51 +594,6 @@ main {
                     display: block;
                     margin-top: 10px;
                     font-weight: 600;
-                }
-            }
-        }
-    }
-
-    #floating_tab {
-        background: #8f8f8f;
-        max-width: 660px;
-        margin: 0 auto;
-        border-radius: 35px;
-        padding: 8px 10px;
-        position: sticky;
-        left: 0;
-        bottom: 35px;
-        z-index: 999;
-
-        ul {
-            display: flex;
-            align-items: center;
-            column-gap: 10px;
-            text-align: center;
-
-            li {
-                width: calc(33.3333% - 7px);
-
-                a {
-                    display: block;
-                    font-size: $fs-18;
-                    font-weight: 700;
-                    color: #fff;
-                    line-height: 5rem;
-                    border-radius: 35px;
-                    transition: all 0.3s;
-
-                    &:focus,
-                    &:hover,
-                    &.on {
-                        background: #000;
-                    }
-
-                    img {
-                        vertical-align: middle;
-                        width: 30px;
-                        margin-right: 12px;
-                    }
                 }
             }
         }
