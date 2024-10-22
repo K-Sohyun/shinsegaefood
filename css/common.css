@@ -1109,16 +1109,26 @@ main #floating_tab ul li a img {
     margin-top: 5rem;
     bottom: 20px;
   }
+  main #floating_tab.on {
+    max-width: 450px;
+  }
   main #floating_tab ul li a {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     line-height: 3.5rem;
   }
   main #floating_tab ul li a img {
-    width: 16px;
+    width: 13px;
+    margin-right: 6px;
   }
   #main_container h2 {
     font-size: 3.5rem;
     margin-bottom: 2rem;
+  }
+  #main_container .video_box {
+    border-radius: 30px;
+  }
+  #main_container .swiper .inner_box {
+    border-radius: 30px;
   }
   #main_container #main_sec1 {
     padding: 12rem 0 5rem;
@@ -1154,12 +1164,22 @@ main #floating_tab ul li a img {
   #ft .ft_top .compy_info dl {
     margin-top: 1rem;
   }
+  #ft .ft_top .compy_info dl dt {
+    margin-bottom: 5px;
+  }
+  #ft .ft_top .compy_info dl dt::before {
+    height: 10px;
+    margin: 0 5px 0 3px;
+  }
   #ft .ft_top .ft_sns {
     position: static;
     margin-bottom: 2rem;
   }
   #ft .ft_top .compy_copy {
     margin-top: 2rem;
+  }
+  #ft .ft_top a {
+    color: #909090;
   }
   #ft .ft_btm {
     padding: 2rem 15px;
@@ -1173,8 +1193,11 @@ main #floating_tab ul li a img {
   #ft .ft_btm .ft_link li a.on {
     font-size: 1.4rem;
   }
+  .body_back {
+    bottom: 30%;
+  }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 380px) {
   /*Main*/
   main #floating_tab {
     margin-top: 3rem;
