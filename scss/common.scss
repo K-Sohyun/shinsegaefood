@@ -327,7 +327,7 @@ main {
         position: sticky;
         left: 0;
         bottom: 35px;
-        z-index: 999;
+        z-index: 99;
         opacity: 0;
         transform: translateY(15vh);
         transition: transform 0.3s, opacity 0.5s, max-width 0.5s 0.3s;
@@ -697,6 +697,7 @@ main {
 
         .compy_copy {
             margin-top: 4rem;
+            line-height: 1.4;
         }
     }
 
@@ -755,7 +756,7 @@ main {
             position: relative;
             width: 24rem;
             margin-left: auto;
-            z-index: 10;
+            z-index: 100;
 
             .fam_btn {
                 position: relative;
@@ -832,9 +833,9 @@ main {
 
 #top_btn {
     position: fixed;
-    right: 5rem;
-    bottom: 7rem;
-    z-index: 100;
+    right: 3rem;
+    bottom: 10rem;
+    z-index: 99;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s;
@@ -1475,6 +1476,19 @@ main {
 
                     &.on {
                         font-size: $fs-14;
+                    }
+                }
+            }
+
+            .ft_family {
+                .fam_list {
+                    max-height: 400px;
+                    overflow-y: auto;
+                    -ms-overflow-style: none;
+
+                    &::-webkit-scrollbar {
+                        display: none;
+                        width: 0 !important;
                     }
                 }
             }
