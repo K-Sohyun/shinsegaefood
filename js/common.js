@@ -21,29 +21,31 @@ menuClose.addEventListener('click', function () {
     allMenu.classList.remove('on');
 });
 
-document.querySelectorAll('#all_menu .dep2_ul').forEach(function(dep2Ul){
-    if (dep2Ul.querySelector('.dep3_ul')) {
-        dep2Ul.classList.add('sub_yes');
+document.querySelectorAll('#all_menu .dep2_ul').forEach(function(subUl){
+    if (subUl.querySelector('.dep3_ul')) {
+        subUl.classList.add('sub_yes');
     }
 });
 
 
 //모바일메뉴
-const allDep1Lis = document.querySelectorAll('#all_menu .dep1_li');
+const dep1Lis = document.querySelectorAll('#all_menu .dep1_li');
 let isMobile = window.innerWidth <= 768;
 
-function menuToggle(event) {
-    const allDep2Uls = event.currentTarget.querySelector('#all_menu .dep2_ul');
-    if(allDep2Uls) {
-        allDep2Uls.classList.toggle('show');
-    }
+function menuToggle(dep1A, dep2Ul) {
+    dep1A.classList.toggle('on');
+    dep2Ul.classList.toggle('show');
 }
 
-allDep1Lis.forEach(function (item) {
-    item.addEventListener('click', function (event) {
-        if (isMobile) {
-            event.stopPropagation();
-            menuToggle(event);
+dep1Lis.forEach(function (dep1Li) {
+    const dep1A = dep1Li.querySelector('.dep1_a');
+
+    dep1A.addEventListener('click', function (event) {
+        const dep2Ul = dep1Li.querySelector('.dep2_ul');
+
+        if (isMobile && dep2Ul) {
+            event.preventDefault();
+            menuToggle(dep1A, dep2Ul);
         }
     });
 });
@@ -104,7 +106,7 @@ window.addEventListener('scroll', function () {
 
 //슬라이드
 var mainSwiper1 = new Swiper(".main_swiper1", {
-    slidesPerView: 2.5,
+    slidesPerView: 1.5,
     spaceBetween: 15,
     loop: true,
     loopedSlides: 7,
@@ -113,6 +115,10 @@ var mainSwiper1 = new Swiper(".main_swiper1", {
         prevEl: "#main_sec2 .btn-prev",
     },
     breakpoints: {
+        420: {
+          slidesPerView: 2.5,  //브라우저가 420 이상
+          spaceBetween: 15,
+        },
         768: {
           slidesPerView: 3.5,  //브라우저가 768 이상
           spaceBetween: 20,
@@ -126,7 +132,7 @@ var mainSwiper1 = new Swiper(".main_swiper1", {
 });
 
 var mainSwiper2 = new Swiper(".main_swiper2", {
-    slidesPerView: 2.5, 
+    slidesPerView: 1.5, 
     spaceBetween: 15,
     loop: true,
     loopedSlides: 10,
@@ -135,6 +141,10 @@ var mainSwiper2 = new Swiper(".main_swiper2", {
         prevEl: "#main_sec4 .btn-prev",
     },
     breakpoints: {
+        420: {
+          slidesPerView: 2.5,
+          spaceBetween: 15,
+        },
         768: {
           slidesPerView: 3.5, 
           spaceBetween: 20,
@@ -148,7 +158,7 @@ var mainSwiper2 = new Swiper(".main_swiper2", {
 });
 
 var mainSwiper3 = new Swiper(".main_swiper3", {
-    slidesPerView: 1.5, 
+    slidesPerView: 1.3, 
     spaceBetween: 15,
     loop: true,
     loopedSlides: 10,
